@@ -1,0 +1,34 @@
+<mat-card>
+  <mat-card-title>
+    Patient Satisfaction - Simple Survey
+  </mat-card-title>
+  <mat-card-content>
+    <form [formGroup]="surveyQuestionForm" *ngIf="surveyQuestionForm">
+      <div fxLayout="column" fxLayoutGap="20px">
+        <mat-form-field>
+          <mat-label>Your Name</mat-label>
+          <input formControlName="repliedBy"
+                 matInput
+                 placeholder="Your Name">
+        </mat-form-field>
+        <div *ngFor="let question of survey.questions; let i=index">
+          <div>
+            <label>{{question.id}}. {{question.question}}</label>
+            <mat-radio-group [formControlName]="question.id">
+              <mat-radio-button fxLayout="column"
+                                *ngFor="let choice of question.choices"
+                                [value]="choice.id"
+                                [name]="choice.option">{{ choice.option}}</mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+      </div>
+    </form>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button
+            type="submit"
+            color="primary"
+            (click)="submit()">Submit</button>
+  </mat-card-actions>
+</mat-card>

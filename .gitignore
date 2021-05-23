@@ -1,0 +1,5 @@
+node_modules
+.history
+dist
+little-data-app-ui.code-workspace
+.DS_Store

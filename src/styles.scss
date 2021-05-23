@@ -1,0 +1,29 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.active {
+  color: #4054B2 !important;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.padding-left {
+  padding-left: 20px;
+}
+.padding-bottom {
+  padding-bottom: 20px;
+}
+.padding-top {
+  padding-top: 20px;
+}
+
+.mat-sidenav-content {
+  background: #efefef;
+}
